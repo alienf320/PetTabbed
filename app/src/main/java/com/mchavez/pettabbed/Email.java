@@ -24,6 +24,7 @@ public class Email extends AppCompatActivity {
     private TextInputLayout body;
     private String recipient;
     private Button btn_enviar;
+    Toolbar toolbar3;
 
     private ProgressBar pbEnviando;
 
@@ -87,9 +88,9 @@ public class Email extends AppCompatActivity {
     }
 
     public void establishToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar toolbar3 = (Toolbar) findViewById(R.id.toolbar_contacto);
+        setSupportActionBar(toolbar3);
 
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

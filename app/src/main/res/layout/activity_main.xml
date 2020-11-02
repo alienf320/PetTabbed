@@ -15,14 +15,19 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
             app:layout_scrollFlags="enterAlwaysCollapsed"
             app:title="Pentagram"
-            app:titleTextColor="#FFFFFF"></androidx.appcompat.widget.Toolbar>
+            app:titleTextColor="#FFFFFF"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:fontFamily="sans-serif-black"
+            android:textSize="24sp"
+            android:textStyle="bold|italic">
+        </androidx.appcompat.widget.Toolbar>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"

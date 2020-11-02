@@ -13,6 +13,7 @@ public class DetallePets extends AppCompatActivity {
 
     private RecyclerView rvPets;
     private PetAdapter adapter;
+    Toolbar toolbar2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,10 +36,10 @@ public class DetallePets extends AppCompatActivity {
     }
 
     public void establishToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Toolbar toolbar2 = (Toolbar) findViewById(R.id.toolbar_detallePets);
+        setSupportActionBar(toolbar2);
 
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 

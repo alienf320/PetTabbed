@@ -34,20 +34,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
         ViewPager viewPager = findViewById(R.id.view_pager);
         TabLayout tabs = findViewById(R.id.tabs);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar_main);
 
+        // Crea el ViewPager con las tabs
         viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(),agregarFragments()));
         tabs.setupWithViewPager(viewPager);
         tabs.getTabAt(0).setIcon(R.drawable.ic_action_home);
         tabs.getTabAt(1).setIcon(R.drawable.ic_pets);
 
         setSupportActionBar(toolbar);
-
-
-        // setUpViewPager();
 
         FloatingActionButton fab = findViewById(R.id.fab);
 
@@ -99,15 +96,5 @@ public class MainActivity extends AppCompatActivity {
 
         return fragments;
     }
-
-    private void setUpViewPager(){
-        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(),agregarFragments()));
-        tabs.setupWithViewPager(viewPager);
-        tabs.getTabAt(0).setIcon(R.drawable.ic_action_home);
-        tabs.getTabAt(1).setIcon(R.drawable.ic_pets);
-
-    }
-
-
 
 }

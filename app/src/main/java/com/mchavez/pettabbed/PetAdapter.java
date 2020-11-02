@@ -38,8 +38,20 @@ public class PetAdapter extends RecyclerView.Adapter<PetHolder> {
         return petList.size();
     }
 
+    // ### Estos quizás solucionen el problema de el Recycler cambiando las imágenes
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
+    // ###
+
     public void agregaPets(Mascota mascota) {
         petList.add(mascota);
-        notifyDataSetChanged();
+        //notifyDataSetChanged(); ### Esto puede causar errores
     }
 }
