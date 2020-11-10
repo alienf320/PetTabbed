@@ -1,4 +1,4 @@
-package com.mchavez.pettabbed;
+package com.mchavez.pettabbed.adapter;
 
 
 import androidx.fragment.app.Fragment;

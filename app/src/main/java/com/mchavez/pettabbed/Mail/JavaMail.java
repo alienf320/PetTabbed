@@ -1,6 +1,4 @@
-package com.mchavez.pettabbed;
-
-import android.util.Log;
+package com.mchavez.pettabbed.Mail;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

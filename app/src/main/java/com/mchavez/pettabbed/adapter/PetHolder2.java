@@ -1,4 +1,4 @@
-package com.mchavez.pettabbed;
+package com.mchavez.pettabbed.adapter;
 
 import android.view.View;
 import android.widget.ImageButton;
@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.mchavez.pettabbed.R;
 
 public class PetHolder2 extends RecyclerView.ViewHolder {
 
@@ -25,7 +27,7 @@ public class PetHolder2 extends RecyclerView.ViewHolder {
 
     public static void init(Mascota mascota) {
         imgPet.setImageResource((mascota.getFoto()));
-        rating.setText(mascota.getRating());
+        rating.setText(String.valueOf(mascota.getRating()));
 
 
     }

@@ -1,6 +1,7 @@
-package com.mchavez.pettabbed;
+package com.mchavez.pettabbed.adapter;
 
-
+import android.app.Activity;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,17 +9,28 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.mchavez.pettabbed.R;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.mchavez.pettabbed.PetHolder;
 
 public class PetAdapter extends RecyclerView.Adapter<PetHolder> {
 
     private List<Mascota> petList;
+    Activity activity;
+    private Context context;
 
-    public PetAdapter() {
+    public PetAdapter(ArrayList<Mascota> pets, Context context) {
         petList = new ArrayList<>();
+        this.petList = pets;
+        this.context = context;
+        setHasStableIds(true);
+    }
+
+    public PetAdapter(ArrayList<Mascota> pets) {
+        petList = new ArrayList<>();
+        this.petList = pets;
+        setHasStableIds(true);
     }
 
     @NonNull
@@ -30,7 +42,8 @@ public class PetAdapter extends RecyclerView.Adapter<PetHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull PetHolder holder, int i) {
-        PetHolder.init(petList.get(i));
+        PetHolder.init(petList.get(i), context);
+
     }
 
     @Override
@@ -44,6 +57,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetHolder> {
         return position;
     }
 
+
     @Override
     public int getItemViewType(int position) {
         return position;
@@ -52,6 +66,6 @@ public class PetAdapter extends RecyclerView.Adapter<PetHolder> {
 
     public void agregaPets(Mascota mascota) {
         petList.add(mascota);
-        //notifyDataSetChanged(); ### Esto puede causar errores
+        notifyDataSetChanged(); // ### Esto puede causar errores
     }
 }

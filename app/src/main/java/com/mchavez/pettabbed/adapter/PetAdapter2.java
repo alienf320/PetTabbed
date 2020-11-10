@@ -1,4 +1,4 @@
-package com.mchavez.pettabbed;
+package com.mchavez.pettabbed.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.mchavez.pettabbed.R;
 
 import java.util.ArrayList;
 import java.util.List;

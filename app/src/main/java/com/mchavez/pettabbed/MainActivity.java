@@ -2,22 +2,26 @@ package com.mchavez.pettabbed;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.tabs.TabLayout;
-
-import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.tabs.TabLayout;
+import com.mchavez.pettabbed.Mail.Email;
+import com.mchavez.pettabbed.activities.AcercaDe;
+import com.mchavez.pettabbed.activities.DetallePets;
+import com.mchavez.pettabbed.adapter.Mascota;
+import com.mchavez.pettabbed.adapter.PageAdapter;
+import com.mchavez.pettabbed.fragments.Fragment2;
+import com.mchavez.pettabbed.fragments.Fragment_RV;
 
 import java.util.ArrayList;
 

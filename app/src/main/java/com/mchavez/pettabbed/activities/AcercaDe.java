@@ -1,8 +1,10 @@
-package com.mchavez.pettabbed;
+package com.mchavez.pettabbed.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.mchavez.pettabbed.R;
 
 public class AcercaDe extends AppCompatActivity {
 

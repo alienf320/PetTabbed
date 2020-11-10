@@ -1,4 +1,4 @@
-package com.mchavez.pettabbed;
+package com.mchavez.pettabbed.Mail;
 
 import java.security.AccessController;
 import java.security.Provider;

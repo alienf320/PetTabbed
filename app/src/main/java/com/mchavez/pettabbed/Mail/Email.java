@@ -1,4 +1,4 @@
-package com.mchavez.pettabbed;
+package com.mchavez.pettabbed.Mail;
 
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.mchavez.pettabbed.R;
 
 import javax.mail.AuthenticationFailedException;
 
@@ -33,9 +34,9 @@ public class Email extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        user = (TextInputLayout) findViewById(R.id.username);
-        pass = (TextInputLayout) findViewById(R.id.password);
-        body = (TextInputLayout) findViewById(R.id.mensaje);
+        user = findViewById(R.id.username);
+        pass = findViewById(R.id.password);
+        body = findViewById(R.id.mensaje);
         btn_enviar = findViewById(R.id.btn_enviar);
         recipient = "aerocmc@gmail.com";
 
@@ -88,7 +89,7 @@ public class Email extends AppCompatActivity {
     }
 
     public void establishToolbar() {
-        Toolbar toolbar3 = (Toolbar) findViewById(R.id.toolbar_contacto);
+        Toolbar toolbar3 = findViewById(R.id.toolbar_contacto);
         setSupportActionBar(toolbar3);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
